@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Users Index</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Users Index</h1>
+    <ul style="margin: 0 25%;">
+        {% for result in results %}
+            <li>The ID is {{ result.ID }}. The name is {{ result.name }}. The location is {{ result.location }}...</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

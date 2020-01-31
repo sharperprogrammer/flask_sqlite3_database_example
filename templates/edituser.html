@@ -1,0 +1,17 @@
+<nav>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('users') }}">Users</a></li>
+        <li><a href="{{ url_for('add_user') }}">Add User</a></li>
+    </ul>
+</nav>
+
+<h1>Editing: {{ result.name }}</h1>
+<form method="POST" action="/users/{{ result.ID }}">
+    <input type="text" name="name" {% if result: %} value="{{ result.name }}" {% endif %} >
+    <br>
+    <input type="text" name="location" value={{ result.location }}>
+    <br>
+
+    <input type="submit">
+</form>
